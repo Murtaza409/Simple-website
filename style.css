@@ -1,0 +1,9 @@
+#ai-website {
+  border-radius: 5%;
+}
+.txt {
+  border-right: 0.2rem solid rgb(255, 0, 0);
+}
+#textWriter {
+  border-right: 10px solid red;
+}

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body::before {
+        display: block;
+        content: "";
+        height: 60px;
+      }
+
+      #map {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+
+      @media (min-width: 768px) {
+        .news-input {
+          width: 50%;
+        }
+      }
+    </style>
+    <title>Online Course</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg  py-3 fixed-top text-white"
+     style="background-color: rgb(48, 217, 48);">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          
+          <h2 class="text-white text-center">
+            <i class="bi bi-house pb-2 mb-1"></i>
+            Online Course</h2></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <div class="input-group news-input">
+           
+            
+          </div>
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a href="#learn" class="nav-link text-white">What You'll Learn</a>
+            </li>
+            <li class="nav-item">
+              <a href="#questions" class="nav-link text-white">About this course</a>
+            </li>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link text-white">Our Group</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  
+    <section
+      class="bg-dark text-light p-2 p-lg-0 pt-lg-5 text-center text-sm-start"
+    >
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Become a <span class="text-primary" id="textWriter"> </span></h1>
+            <h3 class="text-primary">Developer <span class="text-danger">=></span> 
+              <span
+                class="txt-type text-warning"
+                data-wait="3000"
+                data-words='[" Murtaza Afzali","مرتضی افضلی"]'
+              class="btn btn-primary btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#enroll"
+            ></div>
+        
+          
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="image/showcase.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+
+   <!-- about our course -->
+    <section class="p-5 bg-success">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md">
+            <div class="card bg-danger text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop" id="course-icon"></i>
+                </div>
+                <h3 class="card-title mb-3">
+                  <span class="text-warning">About course</span></h3>
+                <p class="card-text">
+                  Receive the best online education in Computer Science today.
+                   Browse our courses. Browse
+                   Lorem ipsum dolor sit.
+                </p>
+                <!-- <a href="#" class="btn btn-primary">Read More</a> -->
+                <button class="btn btn-primary" id="button-image">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-secondary text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-person-square" id="student-icon"></i>
+                </div>
+                <h3 class="card-title mb-3">
+                  <span class="text-warning">Our Student</span></h3>
+                <p class="card-text">
+                  My Students, Our Students explores the hard truths of current special
+                  education practice and outlines five essential disruptions
+                </p>
+                <!-- <a href="#" class="btn btn-dark">Read More</a> -->
+                <button class="btn btn-primary" id="button-user">See Our Student</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-primary text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h3 class="card-title mb-3">
+                  <span class="">Sign UP Student</span>
+                </h3>
+                <p class="card-text">
+                  Free Website Maker — We've made
+                   website building easy for you--and totally free.
+                </p>
+                <button
+                class="btn btn-danger btn-lg mb-3"
+                data-bs-toggle="modal"
+                data-bs-target="#enroll"
+              >
+                Start Online
+              </button>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Artificial intelligence (AI) -->
+    <section
+    id="learn"
+    class="p-5 text-light"
+    style="background-color: rgb(61, 5, 66)"
+  >
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md p-5">
+          <h2 class="text-warning">Artificial intelligence (AI)</h2>
+          <p class="lead">
+
+            Artificial intelligence (AI), in its broadest sense, is
+            intelligence exhibited by machines, particularly computer systems
+          </p>
+          <p>
+            Some high-profile applications of AI include advanced web search
+            engines (e.g., Google Search); recommendation systems quae
+            similique laboriosam iste minus placeat odit velit quos, nulla
+            architecto amet voluptates?
+          </p>
+          <button class="btn btn-danger btn-lg display-3" id="ai-code">
+           <h2 > Learn AI
+            <img src="image/ai2.jpeg" class="rounded-circle ml-1" /></h2>
+          </button>
+        </div>
+        <div class="col-md">
+          <img src="AI/1.jpg" class="img-fluid " id="ai-website" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Learn w3school -->
+    <section id="learn" class="p-5 ">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="image/fundamentals.svg" class="img-fluid" id="javascript-code" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Learn more about website</h2>
+            <p class="lead">
+              Create a professional website for free with the Website.com website builder. Domain names,
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+              reiciendis eius autem eveniet mollitia, at asperiores suscipit
+              quae similique laboriosam iste minus placeat odit velit quos,
+              nulla architecto amet voluptates?
+            </p>
+            <!-- <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Read More
+            </a> -->
+            <button class="btn btn-primary display-5" id="w3school" 
+            title="jump to w3school website">
+            <h2 class="mt-1">W3School Online
+              <img src="image/download.png" class="rounded-circle"></h2>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+     <!-- learn python programming -->
+    <section id="learn" class="bg-success p-5 text-white">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="image/python.png" class="img-fluid" id="python-code" />
+          </div>
+          <div class="col-md p-5">
+            <h2><span class="text-warning">Learn Python Programming</span></h2>
+            <p class="lead">
+              The mission of the Python Software Foundation is to promote,
+              protect, and advance the Python programming language, and to
+              support and facilitate the growth of a diverse and international
+              community of Python
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+              reiciendis eius autem eveniet mollitia,
+            </p>
+            <button id="python-website" class="btn btn-warning btn-lg">
+              <h2>Learn Python
+              <img src="image/hero.png" class="rounded-circle"></h2>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- learn react  -->
+    <section id="learn" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>Learn React</h2>
+            <p class="lead">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Similique deleniti possimus magnam corporis ratione facere!
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+              reiciendis eius autem eveniet mollitia, at asperiores suscipit
+              quae similique laboriosam iste minus placeat odit velit quos,
+              nulla architecto amet voluptates?
+            </p>
+            <!-- <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Read More
+            </a> -->
+            <button class="btn btn-warning" id="react-online">React Online</button>
+          </div>
+          <div class="col-md">
+            <img src="image/react.svg" class="img-fluid" alt="" id="react-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+   <!-- about english course -->
+   <section class="bg-success text-light p-5">
+    <div class="container">
+      <div class="d-md-flex justify-content-between align-items-center">
+        <h2 class="mb-3 text-warning mb-md-0">English Online Listening</h2>
+
+        <div class="input-group news-input">
+          <input
+            id="email-speech"
+            type="text"
+            class="form-control"
+            placeholder="Enter Email"
+          />
+          <button id="open-speech" class="btn btn-warning btn-lg" type="button">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- developers -->
+  <section id="instructors" class="p-5 bg-dark">
+    <div class="container">
+      <h2 class="text-center text-white">Our Group in this project</h2>
+      <p class="lead text-center text-white mb-5">
+       
+      </p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img
+                src="image/images.png"
+                class="rounded-circle mb-3"
+                alt=""
+              />
+              <h3 class="card-title mb-3">Ali</h3>
+              <p class="card-text">
+                این دانشکده از دو دیپارتمنت مهندسی نرم‌افزار و تکنالوژی معلوماتی برخوردار است. 
+                در برنامه‌های آموزشی دیپارتمنت مهندسی نرم‌افزار آنچه از اهمیت ویژه برخودار است تربیت 
+              </p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <button id="murtaza-facebook">
+              <i class="bi bi-facebook text-dark mx-1"></i></button>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img
+                src="image/images.png"
+                class="rounded-circle mb-3"
+                alt=""
+              />
+              <h3 class="card-title mb-3">Murtaza</h3>
+              <p class="card-text">
+                این دانشکده از دو دیپارتمنت مهندسی نرم‌افزار و تکنالوژی معلوماتی برخوردار است.
+                 در برنامه‌های آموزشی دیپارتمنت مهندسی نرم‌افزار آنچه از اهمیت ویژه برخودار است تربیت 
+              </p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img
+                src="image/images.png"
+                class="rounded-circle mb-3"
+                alt=""
+              />
+              <h3 class="card-title mb-3">Reza</h3>
+              <p class="card-text">
+                این دانشکده از دو دیپارتمنت مهندسی نرم‌افزار و تکنالوژی معلوماتی برخوردار است. 
+                در برنامه‌های آموزشی دیپارتمنت مهندسی نرم‌افزار آنچه از اهمیت ویژه برخودار است تربیت 
+              </p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img
+                src="image/images.png"
+                class="rounded-circle mb-3"
+                alt=""
+              />
+              <h3 class="card-title mb-3">Mohammad</h3>
+              <p class="card-text">
+                این دانشکده از دو دیپارتمنت مهندسی نرم‌افزار و تکنالوژی معلوماتی برخوردار است.
+                 در برنامه‌های آموزشی دیپارتمنت مهندسی نرم‌افزار آنچه از اهمیت ویژه برخودار است تربیت 
+              </p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- about location herat university -->
+    <section id="questions" class="p-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Question about our Online course</h2>
+        <div class="accordion accordion-flush" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-one"
+              >
+                Herat University?
+              </button>
+            </h2>
+            <div
+              id="question-one"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                دانشگاه هرات دارای ۳۵۱ عضو عضو کدر علمی است که ۲۵۶ نفر آن‌ها مرد و ۸۶ زن می‌باشند. ۱۱٬۳۷۷ دانشجو شامل ۷٬۲۵۸ پسر و ۴٬۱۱۹ دختر در این دانشگاه مشغول به تحصیل در رشته‌های مختلف می‌باشند
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-two"
+              >
+                About our teacher?
+              </button>
+            </h2>
+            <div
+              id="question-two"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-three"
+              >
+                What do I need to Know?
+              </button>
+            </h2>
+            <div
+              id="question-three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                نهاد ها و مراکز علمی اکادمیک به عنوان پرچمداران دانش تخصصی و کاربردی،
+                 نقش به سزای در آسایش و رفاه جوامع بشری دارند . سعادت حقیقی در گرو فهم سالم و تطبیق 
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-four"
+              >
+              More information about Herat Univerisy
+              </button>
+            </h2>
+            <div
+              id="question-four"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                استراتژی این نهاد تولید دستاوردهای علمی، انتقال دانش از راه آموزش و کاربردی ساختن علوم و دانش در جهت رفع نیازمندی‌های جامعه و کشور از اهداف اساسی دانشگاه هرات است که این اهداف عناصر اساسی رسالت دانشگاه هرات را تشکیل می‌دهد که تحقق آن دانشگاه هرات را به عنوان دانشگاه برتر در سطح منطقه قرار خواهد داد که با توجه به نکات فوق دانشگاه هرات تلاش نموده‌است تا بهترین امکانات آموزشی را در فضای دانشگاهی برای دانشجویان ارائه نماید؛ از جمله مرکز پژوهش علمی، مراکز اینترنت، کارگاه‌های کامپیوتر، مرکز آموزشی زبان انگلیسی و رایانه ELCLC، مزرعه تحقیقاتی کشاورزی، کتابخانهٔ عمومی با داشتن بیش از ۲۵ هزار جلد کتب در رشته‌های
+                 مختلف، کارگاه‌ها و آزمایشگاه‌های مدرن اختصاصی برای هر دانشکده، کافه‌تریا و خدمات نشر و چاپ، سمینارها و دوره‌های آموزشی کوتاه‌مدت مانند سمینارهای لایحهٔ کریدت، سمینار روش تحقیق، برنامه‌های کارورزی، رادیوی آموزشی صدای جوان را می‌توان نام برد.
+              </div>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-five"
+              >
+                Do you help me find a job?
+              </button>
+            </h2>
+            <div
+              id="question-five"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- Connect with our course -->
+    <section class="p-5 bg-danger">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact Info</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Main Location:</span> 50 Main st Herat
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold"> Phone-Number</span> (0783000247)
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Student Phone:</span> (079231111)
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">University Email:</span> 
+                HeratUniveristy@gmail.com
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Student Email:</span>
+                
+                student@gmail.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map">
+              <img class="m-5" src="image/herat.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">‌Information about Online Course</p>
+        <button class="btn btn-primary btn-lg"
+        data-bs-target="#free"
+        data-bs-toggle="modal"
+        
+        >Free start</button>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- start with you information -->
+    <div
+      class="modal fade"
+      id="enroll"
+      tabindex="-1"
+      aria-labelledby="enrollLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollLabel">Start Online</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form>
+              <div class="mb-3">
+                <label for="first-name" class="col-form-label">
+                  First Name:
+                </label>
+                <input type="text" class="form-control" id="first-name" />
+              </div>
+              <div class="mb-3">
+                <label for="last-name" class="col-form-label">Last Name:</label>
+                <input type="text" class="form-control" id="last-name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">Phone:</label>
+                <input type="tel" class="form-control" id="phone" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button"  id="student-rigestration" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- free modal -->
+    <div
+    class="modal fade"
+    id="free"
+    tabindex="-1"
+    aria-labelledby="free"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="enrollLabel">start free</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="first-name" class="col-form-label">
+                First Name:
+              </label>
+              <input type="text" class="form-control" id="free-first-name" />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="col-form-label">Email:</label>
+              <input type="email" class="form-control" id="free-email-start" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            id="free-start"
+            class="btn btn-primary btn-lg"
+
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
