@@ -20,11 +20,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
-      body::before {
-        display: block;
-        content: "";
-        height: 60px;
-      }
+   
 
       #map {
         width: 100%;
@@ -42,40 +38,28 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg  py-3 fixed-top text-white"
-     style="background-color: rgb(48, 217, 48);">
-      <div class="container">
-        <a href="#" class="navbar-brand">
-          
-          <h2 class="text-white text-center">
-            <i class="bi bi-house pb-2 mb-1"></i>
-            Online Course</h2></a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navmenu"
-        >
+   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="javascript:void(0)">Online Course</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navmenu">
-          <div class="input-group news-input">
-           
-            
-          </div>
-          <ul class="navbar-nav ms-auto ">
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a href="#learn" class="nav-link text-white">What You'll Learn</a>
+              <a class="nav-link" href="#learn">What you will learn</a>
             </li>
             <li class="nav-item">
-              <a href="#questions" class="nav-link text-white">About this course</a>
+              <a class="nav-link" href="#questions">About this Course</a>
             </li>
             <li class="nav-item">
-              <a href="#instructors" class="nav-link text-white">Our Group</a>
+              <a class="nav-link" href="#instruntors">Our Group</a>
             </li>
           </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="text" placeholder="Search">
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
         </div>
       </div>
     </nav>
@@ -100,7 +84,7 @@
         
           
           <img
-            class="img-fluid w-50 d-none d-sm-block"
+            class="img-fluid w-50  d-sm-block"
             src="image/showcase.svg"
             alt=""
           />
@@ -579,7 +563,7 @@
           </div>
           <div class="col-md">
             <div id="map">
-              <img class="m-5" src="image/herat.jpeg" alt="">
+              <img class="m-5 d-none d-sm-block" src="image/herat.jpeg" alt="">
             </div>
           </div>
         </div>
